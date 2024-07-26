@@ -1,8 +1,16 @@
-interface Product {
-  id: number;
-  image: string;
+import { ImageSourcePropType } from "react-native";
+
+export interface Product {
+  id: string;
+  image: ImageSourcePropType;
   title: string;
   description: string;
-  category: "traditional" | "candy" | "special";
+  category: string;
   price: number;
+}
+
+export enum Categories {
+  Tradicional = "tradicional",
+  Doce = "doce",
+  Especial = "especial",
 }
